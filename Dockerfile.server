@@ -1,0 +1,5 @@
+FROM ruby:3.3.6
+WORKDIR /app
+COPY server.rb /app/
+EXPOSE 8787
+CMD ["ruby", "server.rb"]

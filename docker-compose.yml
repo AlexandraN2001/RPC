@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  rpc-server:
+    build:
+      context: .  
+      dockerfile: Dockerfile.server
+    volumes:
+      - ./server.rb:/app/server.rb  
+  rpc-client:
+    build:
+      context: . 
+      dockerfile: Dockerfile.client
+    volumes:
+      - ./client.rb:/app/client.rb  
